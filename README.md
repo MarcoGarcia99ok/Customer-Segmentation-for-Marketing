@@ -1,106 +1,62 @@
-# Customer-Segmentation-for-Marketing
-This project implements a machine learning model using clustering techniques to segment customers into distinct groups. The goal is to develop marketing strategies tailored to each customer segment based on their purchasing behavior.
+# CustomerSegmentationAnalyzer
 
-## Overview
+## Description
+This project utilizes clustering techniques to create a machine learning model that segments customers into different groups to develop marketing strategies. The dataset includes customer IDs, annual income, spending scores, age, and preferred product categories. The goal is to identify distinct customer segments and analyze their characteristics to optimize marketing campaigns.
 
-This project applies clustering techniques to segment customers into distinct groups based on their demographic and spending characteristics. The goal is to analyze customer behavior and optimize marketing strategies.
+## Features
+- Analyzes customer data, including age, income, and spending scores.
+- Utilizes clustering techniques such as K-Means and hierarchical clustering.
+- Reduces dimensionality using Principal Component Analysis (PCA) and Singular Value Decomposition (SVD) for visualization.
+- Visualizes clusters with scatter plots and dendrograms.
+- Provides statistical insights for each cluster to guide marketing strategies.
 
-## Dataset
+## Getting Started
 
-The dataset used contains the following columns:
+### Prerequisites
+Ensure you have the following software installed:
+- Python 3.x
+- Required Python libraries:
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - scipy
+- Jupyter Notebook 7.x
 
-Customer ID: Unique identifier for each customer.
+## Data
+The project uses a CSV file named customer_data.csv, which should be located in the same folder as the Jupyter notebook. The file contains the following columns:
 
-Age: Customer's age in years.
+- Customer ID: Unique identifier for each customer.
+- Age: Customer’s age.
+- Annual Income (k$): Customer’s yearly income in thousands of dollars.
+- Spending Score (1-100): Score assigned based on purchasing behavior (higher score means higher spending tendency).
+- Preferred Product Category: The product category most frequently purchased by the customer.
 
-Annual Income (k$): Customer's yearly income in thousands of dollars.
+## Usage
 
-Spending Score (1-100): A score assigned to the customer based on their spending habits, where 1 means minimal spending and 100 indicates high spending.
+1. Clone the repository or download the necessary files.
+2. Ensure that the customer_data.csv file is in the same directory as the Jupyter notebook.
+3. Open the Jupyter notebook and run the cells in order.
+4. The code will perform the following actions:
+   - Load the data from the CSV file.
+   - Normalize the data using MinMaxScaler.
+   - Apply PCA and SVD to reduce dimensions and visualize patterns.
+   - Cluster the data using K-Means and hierarchical clustering.
+   - Generate visualizations, including scatter plots and dendrograms.
+   - Provide insights into customer segments with statistical summaries.
 
-Product Category: The preferred category of products purchased by the customer.
+## Example
+An example of how to run the analysis is available in the Jupyter notebook. Simply execute the cells one by one to see the results.
 
-## Methodology
+## Contributing
+Contributions are welcome. If you would like to improve the project, please open an issue or a pull request.
 
-### Data Preprocessing:
+## License
+This project is licensed under the MIT License. See the LICENSE file for more information.
 
-The dataset is loaded using Pandas.
+## Feel Free to Customize
+You can further customize this README as needed. If there are specific steps you want to include in the Usage section.
 
-Data is inspected for missing values and overall structure.
-
-Descriptive statistics are computed to understand distributions.
-
-Features are scaled using Min-Max Scaling to ensure uniformity.
-
-### Dimensionality Reduction:
-
-Principal Component Analysis (PCA) is applied to reduce the dataset to two principal components.
-
-Singular Value Decomposition (SVD) is used for additional dimensionality reduction analysis.
-
-### Clustering Techniques:
-
-K-Means Clustering is used to segment the customers into three clusters based on scaled features.
-
-Hierarchical Clustering is applied, and a dendrogram is generated to visualize hierarchical relationships.
-
-### Visualization & Analysis:
-
-A scatter plot is created using PCA results to visualize customer segmentation.
-
-A dendrogram is plotted to illustrate hierarchical clustering.
-
-Cluster statistics are computed to describe the characteristics of each segment.
-
-# Results
-
-The customers were segmented into three distinct groups:
-
-Cluster 1: Young Adults with High Spending
-
-Average age: 33 years
-
-Average income: $68.60k
-
-Spending Score: 70.71/100
-
-This group tends to spend more on experiences and entertainment.
-
-Cluster 2: Older Adults with High Income and Moderate Spending
-
-Average age: 58 years
-
-Average income: $95.47k
-
-Spending Score: 58.86/100
-
-Financially stable but with controlled spending, possibly prioritizing luxury goods or investments.
-
-Cluster 3: Middle-Income Adults with Low Spending
-
-Average age: 42 years
-
-Average income: $49.79k
-
-Spending Score: 21.63/100
-
-More conservative consumers focusing on essential needs.
-
-# Technologies Used
-
-Python
-
-Pandas & NumPy (Data manipulation and preprocessing)
-
-Matplotlib & Seaborn (Data visualization)
-
-Scikit-learn (Machine learning models and clustering algorithms)
-
-SciPy (Hierarchical clustering and dendrogram generation)
-
-# Usage
-
-Clone the repository and ensure you have the necessary dependencies installed.
-
-Load the dataset (customer_data.csv).
-
-Run the script to perform clustering and generate visualizations.
+## Acknowledgments
+Thank you Fede.
